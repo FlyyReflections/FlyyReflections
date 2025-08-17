@@ -1,0 +1,16 @@
+{
+  "order_id":"EVT-123456",
+  "product_type":"event_paint_sip",
+  "package":"gold",
+  "headcount":34,
+  "date":"2025-09-18",
+  "time":"18:30",
+  "venue":"123 Main St, Austin TX",
+  "contact":{"name":"Jordan","email":"events@client.com","phone":"+1-555-123-4567"},
+  "brand":{"colors":"#FF2EBF,#8FD3FF,onyx","vibe":"luxury… grief-to-glam… 11:11"},
+  "assets":{"logo_url":"https://example.com/logo.png"},
+  "text_lines":{"line1":"FLYY","line2":"REFLECTIONS"},
+  "brand_easter_eggs":["11:11","wave halo"],
+  "notes":"Honor Marcus… butterfly left, angel wing right… chrome tears",
+  "rush":true
+}

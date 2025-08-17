@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FLYY REFLECTIONS — Digital Art Studio</title>
+<link rel="stylesheet" href="assets/css/styles.css"/>
+<meta name="description" content="Custom AI-powered paint & sip events, luxe memorial art, and fully outsourced merch — Flyy Reflections."/>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">
+      <div class="mark"></div>
+      <div>
+        <h1>FLYY REFLECTIONS</h1>
+        <div class="tag">digital art studio · 11:11 aligned</div>
+      </div>
+    </div>
+    <a class="btn" href="#book">Book Event</a>
+  </nav>
+
+  <header class="hero container">
+    <h2>Luxury paint & sip… fully customized… zero hassle</h2>
+    <p>Cracked mirror crest… butterfly wing left… angel wing right… chrome teardrops… hot‑pink spray… baby‑blue rim.
+    Your team shows up… you host… we bring the vibe. Our AI pre‑builds the design pack, vendors ship supplies and décor, and we deliver a flawless night — on‑brand, on‑time, at 11:11.</p>
+    <div class="kpi" style="margin-top:18px">
+      <span class="pill">No inventory</span>
+      <span class="pill">Auto‑generated canvases</span>
+      <span class="pill">POD merch & prints</span>
+      <span class="pill">Global booking</span>
+    </div>
+  </header>
+
+  <section class="section container" id="packages">
+    <h3>Packages</h3>
+    <div class="grid cards">
+      <article class="card">
+        <h3>Silver</h3>
+        <p class="small">90 minutes · up to 20 guests · pre‑printed poster boards · one custom design · recap email</p>
+        <div class="badge">$1,000 + $25/guest supplies</div>
+      </article>
+      <article class="card">
+        <h3>Gold</h3>
+        <p class="small">2 hours · up to 40 guests · pre‑printed canvases · welcome signage · neon crest backdrop · time‑lapse reel</p>
+        <div class="badge">$1,750 + $30/guest</div>
+      </article>
+      <article class="card">
+        <h3>Platinum</h3>
+        <p class="small">3 hours · up to 60 guests · two design options · VIP décor · mini digital portrait for host · framed office print after</p>
+        <div class="badge">$2,300 + $35/guest</div>
+      </article>
+    </div>
+    <p class="notice" style="margin-top:14px">Everything ships direct to your venue from our partners — canvases, paints, brushes, aprons, signage, and on‑theme décor. You show up and shine.</p>
+  </section>
+
+  <section class="section container" id="book">
+    <h3>Request a Booking</h3>
+    <p class="small">We’ll auto‑generate your design pack from this form and send a proof within 24 hours. Deposits and full scheduling happen on approval.</p>
+    <form id="bookingForm" class="grid two" autocomplete="on">
+      <div><label class="label">Name</label><input class="input" type="text" name="name" required/></div>
+      <div><label class="label">Email</label><input class="input" type="email" name="email" required/></div>
+      <div><label class="label">Phone</label><input class="input" type="tel" name="phone"/></div>
+      <div><label class="label">Company / Team</label><input class="input" type="text" name="company"/></div>
+      <div><label class="label">Preferred Date</label><input class="input" type="date" name="date" required/></div>
+      <div><label class="label">Time</label><input class="input" type="time" name="time" required/></div>
+      <div><label class="label">Headcount</label><input class="input" type="number" min="6" max="120" name="headcount" required/></div>
+      <div><label class="label">Package</label>
+        <select name="package" class="input" required>
+          <option value="silver">Silver</option>
+          <option value="gold">Gold</option>
+          <option value="platinum">Platinum</option>
+        </select>
+      </div>
+      <div class="two" style="grid-column:1/-1">
+        <div><label class="label">Venue Address</label><input class="input" type="text" name="venue" required/></div>
+        <div><label class="label">Brand Colors (hex or names)</label><input class="input" type="text" name="colors" placeholder="#FF2EBF, #8FD3FF, onyx"/></div>
+      </div>
+      <div class="two" style="grid-column:1/-1">
+        <div><label class="label">Vibe words</label><input class="input" type="text" name="vibe" placeholder="luxury… grief‑to‑glam… 11:11… neon… chrome"/></div>
+        <div><label class="label">Logo URL (optional)</label><input class="input" type="url" name="logo" placeholder="https://..."/></div>
+      </div>
+      <div style="grid-column:1/-1">
+        <label class="label">Notes</label>
+        <textarea class="input" name="notes" rows="4" placeholder="Names to honor… symbols to include… décor requests… dietary rules…"></textarea>
+      </div>
+      <div style="grid-column:1/-1;display:flex;gap:12px;align-items:center">
+        <input id="rush" type="checkbox" name="rush"/>
+        <label for="rush" class="small">Rush event (priority design & logistics)</label>
+      </div>
+      <div style="grid-column:1/-1;display:flex;gap:12px;align-items:center">
+        <button id="bookBtn" class="btn" type="submit">Request Booking</button>
+        <div id="bookingSuccess" class="badge hidden">Submitted — check email for your proof window</div>
+      </div>
+    </form>
+    <script>document.querySelector('#bookingSuccess').classList.add('hidden');</script>
+  </section>
+
+  <footer class="footer">
+    <div>© Flyy Reflections — Digital Art Studio · Drops at 11:11</div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
