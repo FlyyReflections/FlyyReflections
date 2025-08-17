@@ -1,0 +1,28 @@
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ ok: false, error: 'POST only' });
+  }
+
+  // Parse JSON safely
+  let payload = {};
+  try { payload = req.body ?? {}; } catch (_) {}
+
+  // Optional: forward to Zapier/Make if you later add FORWARD_URL in Vercel env
+  let forwardStatus = null;
+  const url = process.env.FORWARD_URL;
+  if (url) {
+    try {
+      const r = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      forwardStatus = r.status;
+    } catch (e) {
+      forwardStatus = 'error';
+    }
+  }
+
+  // Return success; view data in Vercel → Project → Deployments → Functions Logs
+  return res.status(200).json({ ok: true, received: payload, forwarded: forwardStatus });
+}
